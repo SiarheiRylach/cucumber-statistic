@@ -1,0 +1,105 @@
+{
+  "env": {
+    "browser": true,
+    "es6": true,
+    "node": true,
+    "protractor": true
+  },
+  "extends": "eslint:recommended",
+  "parserOptions": {
+    "ecmaVersion": 6,
+    "sourceType": "module",
+    "ecmaFeatures": {
+      "impliedStrict": true
+    }
+  },
+  "rules": {
+    "semi": [
+      "error",
+      "always"
+    ],
+    "no-console": 0,
+    "no-undef": 0,
+    "no-trailing-spaces": 2,
+    "no-unused-vars": ["warn", { "args": "none" }],
+    "no-extra-boolean-cast": 1,
+    "no-dupe-keys": 2,
+    "no-dupe-args": 2,
+    "no-unreachable": 2,
+    "no-extra-semi": 1,
+    "no-invalid-regexp": 1,
+    "use-isnan": 2,
+    "no-undef-init": 2,
+    "no-case-declarations": 0,
+    "no-cond-assign": 0,
+    "no-const-assign": 2,
+    "no-duplicate-imports": 2,
+    "no-var": 2,
+    "prefer-const": 1,
+    "arrow-spacing": ["warn", { "before": true, "after": true }],
+    "array-bracket-spacing": ["warn", "never"],
+    "comma-spacing": ["warn", { "before": false, "after": true }],
+    "keyword-spacing": 1,
+    "block-spacing": 2,
+    "no-alert": 2,
+    "no-caller": 2,
+    "no-empty-function": 2,
+    "no-eq-null": 2,
+    "no-eval": 2,
+    "no-loop-func": 2,
+    "no-multi-spaces": ["error", { "ignoreEOLComments": true }],
+    "space-in-parens": ["warn", "never"],
+    "no-redeclare": 2,
+    "handle-callback-err": 2,
+    "no-mixed-requires": 2,
+    "no-path-concat": 2,
+    "no-process-exit": 2,
+    "no-restricted-modules": 2,
+    "no-useless-escape": 0,
+    "one-var-declaration-per-line": 0,
+    "no-mixed-operators": 0,
+    "no-mixed-spaces-and-tabs": 2,
+    "no-lonely-if": 0,
+    "space-before-blocks": 1,
+    "no-multiple-empty-lines": [
+      "error",
+      {
+        "max": 2
+      }
+    ],
+    "one-var": [
+      "error",
+      {
+        "var": "never",
+        "let": "never",
+        "const": "never"
+      }
+    ],
+    "indent": [
+      "error",
+      4,
+      {
+        "SwitchCase": 1,
+        "CallExpression": {"arguments": "first"},
+        "ArrayExpression": "first",
+        "flatTernaryExpressions": true,
+        "ObjectExpression": 1,
+        "FunctionExpression": {"body": 1, "parameters": 1},
+        "VariableDeclarator": {
+          "let": 2,
+          "const": 3
+        },
+        "ignoreComments": true
+      }
+    ],
+    "camelcase": [
+      "error",
+      {
+        "properties": "never"
+      }
+    ]
+  },
+  "globals": {
+    "Exception": false
+  }
+}
