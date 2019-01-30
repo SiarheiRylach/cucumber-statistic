@@ -28,7 +28,12 @@ const args = require('yargs').options({
     },
 }).argv;
 
-const statistic = getStatistic(require(args.cucumberResultsPath), args.statisticType)
-    .sort(statisticSort(true, args.statisticType));
+const statistic = getStatistic(require(args.cucumberResultsPath), args.statisticType);
+
+if (args.statisticType === 'scenarios') {
+    statistic.scenarios.sort(statisticSort(true, args.statisticType));
+} else {
+    statistic.sort(statisticSort(true, args.statisticType));
+}
 
 fs.writeFileSync(`${args.outputDestination}${args.statisticType}.duration.json`, JSON.stringify(statistic, null, 4));
